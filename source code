@@ -1,0 +1,38 @@
+# Import necessary modules
+import random
+
+# Define a list of artist styles
+styles = ['pop', 'rock', 'country', 'jazz']
+
+# Prompt the user to select an artist style
+style = input('Please select an artist style (pop, rock, country, jazz): ')
+
+# Check if the selected style is valid
+if style not in styles:
+  print('Invalid artist style selected')
+
+# If the style is valid, generate chords for a song in that style
+else:
+  print('Generating chords for a {} song...'.format(style))
+
+  # Pop song chords
+  if style == 'pop':
+    chords = ['G', 'C', 'D', 'Em']
+
+  # Rock song chords
+  elif style == 'rock':
+    chords = ['A', 'D', 'E', 'G']
+
+  # Country song chords
+  elif style == 'country':
+    chords = ['C', 'F', 'G', 'Am']
+
+  # Jazz song chords
+  elif style == 'jazz':
+    chords = ['Dm7', 'G7', 'Cmaj7', 'Fmaj7']
+
+  # Shuffle the chords
+  random.shuffle(chords)
+
+  # Print the chords to the user
+  print('Here are the chords for your {} song: {}'.format(style, chords))
